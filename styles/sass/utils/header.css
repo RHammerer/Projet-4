@@ -1,0 +1,20 @@
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5em;
+  width: 100vw;
+  margin-top: 15px;
+}
+.title-container .fa-arrow-left {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+.title-container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=header.css.map */

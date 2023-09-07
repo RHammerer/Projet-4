@@ -1,0 +1,58 @@
+.special-ff{
+    display: flex;
+    justify-content: center;
+}
+.restaurent-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .fa-heart {
+        display: flex;
+        font-size: 1.5em;
+    margin-left: 50px;    
+    }
+}
+.menu{
+    background: $main-bg-color;
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+
+    button{
+        background: $gradient-button;
+        border: 0px;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        height: 50px;
+        width: 186px;
+    }
+}
+.checkmark{
+   flex: 0%;
+    color: $main-bg-color;
+    background-color: #99E2D0;
+    text-align: center;
+    font-size: xx-large;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    left: 330px;
+}
+.checkmark:hover {
+    animation-name: checkbox;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    transition: ease-in-out;
+}

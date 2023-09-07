@@ -1,0 +1,19 @@
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5em;
+    width: 100vw;
+    margin-top: 15px;
+    .fa-arrow-left{
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+        margin-left: 10px;
+    }
+    img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+}

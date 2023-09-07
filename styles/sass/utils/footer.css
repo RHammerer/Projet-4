@@ -1,0 +1,23 @@
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+}
+footer img {
+  filter: contrast(0);
+  filter: brightness(100);
+  width: 33%;
+  margin-bottom: 16px;
+}
+footer .text-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+footer a {
+  color: white;
+}
+footer .fa-solid {
+  width: 20px;
+  height: 20px;
+}/*# sourceMappingURL=footer.css.map */

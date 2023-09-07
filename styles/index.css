@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.special-ff {
+  font-family: "Shrikhand", sans-serif;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+}
+main section h2 {
+  margin: 10px;
+}
+main section a {
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  padding-bottom: 50px;
+}
+main section a img {
+  border-radius: 25px 25px 0px 0px;
+  height: 100%;
+  width: 100%;
+}
+main section a .fa-heart {
+  display: inline;
+  justify-content: end;
+  align-items: center;
+}
+main section a span {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.cards-restaurent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 39px 50px;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+.discover button {
+  margin-top: 20px;
+  border-radius: 25px;
+  padding: 10px;
+  border: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+}
+.fonctionnement h2 {
+  margin: 10px;
+}
+.fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement ul li {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 15px;
+  text-align: center;
+  height: 72px;
+  position: relative;
+}
+.fonctionnement ul li span {
+  position: absolute;
+  top: 40%;
+  left: -10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: #9356DC;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fonctionnement ul li .fa-solid {
+  padding-right: 15px;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+}
+footer img {
+  filter: contrast(0);
+  filter: brightness(100);
+  width: 33%;
+  margin-bottom: 16px;
+}
+footer .text-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+footer a {
+  color: white;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5em;
+  width: 100vw;
+  margin-top: 15px;
+}
+.title-container .fa-arrow-left {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+.title-container img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.special-ff {
+  display: flex;
+  justify-content: center;
+}
+
+.restaurent-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.restaurent-title .fa-heart {
+  display: flex;
+  font-size: 1.5em;
+  margin-left: 50px;
+}
+
+.menu {
+  background: #F6F6F6;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+}
+.button-container button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  width: 186px;
+}
+
+.dish-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0px 4.0114941597px 15.0431032181px 0px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  position: relative;
+}
+
+.menu-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px;
+}
+.location .fa-location-dot {
+  padding-right: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,12 @@
+@keyframes checkbox {
+from {
+    visibility: hidden;
+transform: translateX(100px);
+font-size: 0;
+} 
+to {
+    visibility: visible;
+    transform: translateX(-100px);
+    font-size: xx-large;
+}
+}

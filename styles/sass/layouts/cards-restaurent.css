@@ -1,0 +1,33 @@
+main section {
+  display: flex;
+  flex-direction: column;
+}
+main section h2 {
+  margin: 10px;
+}
+main section a {
+  display: flex;
+  flex-direction: column;
+  height: 251px;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  padding-bottom: 50px;
+}
+main section a img {
+  border-radius: 25px 25px 0px 0px;
+  height: 100%;
+  width: 100%;
+}
+main section a span {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.cards-restaurent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}/*# sourceMappingURL=cards-restaurent.css.map */
