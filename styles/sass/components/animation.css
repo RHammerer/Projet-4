@@ -1,12 +1,72 @@
 @keyframes checkbox {
   from {
     visibility: hidden;
-    transform: translateX(100px);
-    font-size: 0;
   }
   to {
     visibility: visible;
+  }
+}
+@keyframes menu {
+  from {
     transform: translateX(-100px);
-    font-size: xx-large;
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.entree .dish-card {
+  animation: menu 0.5s ease-in-out;
+}
+
+.plat .dish-card {
+  animation: menu 1s ease-in-out;
+}
+
+.dessert .dish-card {
+  animation: menu 1.5s ease-in-out;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+  visibility: hidden;
+  animation: loader 3s;
+}
+
+.loader-spinner {
+  position: absolute;
+  top: 50%;
+  left: 40vw;
+  border: 16px solid #99e2d0;
+  border-top: 16px solid #008766;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  animation: spin 3s forwards;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+@keyframes loader {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    visibility: visible;
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
   }
 }/*# sourceMappingURL=animation.css.map */

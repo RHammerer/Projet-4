@@ -1,0 +1,48 @@
+@media (min-width: 767px) {
+  .cards-restaurant ul {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    a {
+      height: 210px;
+    }
+  }
+
+  .fonctionnement {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      margin-left: 180px;
+      margin-right: 180px;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px;
+    margin-top: 30px;
+    align-items: flex-end;
+    height: 114px;
+    gap: 30px;
+    padding: 30px;
+
+    img {
+      display: flex;
+      justify-content: flex-end;
+      width: 138px;
+      height: 27px;
+      margin: 0;
+    }
+    .footer {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 76px;
+    }
+  }
+}

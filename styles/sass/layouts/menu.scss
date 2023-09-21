@@ -1,58 +1,76 @@
-.special-ff{
-    display: flex;
-    justify-content: center;
+.special-ff {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
 }
-.restaurent-title{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    .fa-heart {
-        display: flex;
-        font-size: 1.5em;
-    margin-left: 50px;    
-    }
+.restaurent-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: $main-bg-color;
+  border-radius: 25px 25px 0px 0px;
 }
-.menu{
-    background: $main-bg-color;
+.restaurant-heart {
+  position: absolute;
+  right: 10%;
+  top: 1%;
 }
-.menu-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.menu {
+  background: $main-bg-color;
 }
-.button-container{
-    display: flex;
-    justify-content: center;
-    margin: 40px 0px;
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
 
-    button{
-        background: $gradient-button;
-        border: 0px;
-        border-radius: 25px;
-        color: white;
-        font-size: 16px;
-        font-weight: 500;
-        height: 50px;
-        width: 186px;
-    }
+  button {
+    background: $gradient-button;
+    border: 0px;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    width: 186px;
+  }
 }
-.checkmark{
-   flex: 0%;
-    color: $main-bg-color;
-    background-color: #99E2D0;
-    text-align: center;
-    font-size: xx-large;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    position: absolute;
-    left: 330px;
+.checkmark {
+  position: absolute;
+  right: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: #99e2d0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+  align-items: center;
+  font-size: 0;
+  border-radius: 0px 15px 15px 0px;
 }
-.checkmark:hover {
-    animation-name: checkbox;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    transition: ease-in-out;
+.dish-card:hover .checkmark {
+  animation-name: checkbox;
+  width: 80px;
+  font-size: 30px;
+}
+.menu-price {
+  transition: all 0.5s;
+}
+.dish-card:hover .menu-price {
+  transform: translateX(-80px);
+}
+.dish-card {
+  width: 80%;
+  transition: all 0, 5s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

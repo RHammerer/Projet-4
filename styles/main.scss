@@ -1,24 +1,23 @@
-@import './sass/base/reset';
-@import './sass/base/font-family';
-@import './sass/utils/variables';
-@import './sass/layouts/cards-restaurent.scss';
-@import './sass/layouts/layouts.scss';
-@import './sass/utils/footer.scss';
-@import './sass/utils/header.scss';
-@import './sass/layouts/menu.scss';
-@import './sass/utils/dish-card.scss';
-@import './sass/components/animation.scss';
-.location{
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #EAEAEA;
-font-size: 16px;
-font-weight: 500;
-padding: 15px;
-.fa-location-dot{
+@import "./sass/base/reset";
+@import "./sass/base/font-family";
+@import "./sass/utils/variables";
+@import "./sass/layouts/cards-restaurent.scss";
+@import "./sass/layouts/layouts.scss";
+@import "./sass/utils/footer.scss";
+@import "./sass/utils/header.scss";
+@import "./sass/layouts/menu.scss";
+@import "./sass/utils/dish-card.scss";
+@import "./sass/components/animation.scss";
+@import "./sass/layouts/mediaquerries.scss";
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px;
+  .fa-location-dot {
     padding-right: 10px;
+  }
 }
-}
-
-

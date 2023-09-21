@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -25,7 +29,8 @@ main section {
 main section h2 {
   margin: 10px;
 }
-main section a {
+main section .liste-restaurant {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 251px;
@@ -35,17 +40,19 @@ main section a {
   margin-bottom: 15px;
   padding-bottom: 50px;
 }
-main section a img {
+main section .liste-restaurant img {
   border-radius: 25px 25px 0px 0px;
-  height: 100%;
+  height: 95%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-main section a span {
+main section .liste-restaurant span {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-.cards-restaurent {
+.cards-restaurant ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,11 +133,12 @@ main section a span {
 
 main section a {
   position: relative;
+  height: 90%;
 }
 
 .nouveau {
   position: absolute;
-  left: 285px;
+  right: 15px;
   top: 15px;
   display: flex;
   justify-content: center;
@@ -140,14 +148,55 @@ main section a {
   width: 80px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   color: #008766;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
-.fa-heart {
+.heart-container {
   position: absolute;
-  bottom: 15px;
-  right: 25px;
-  font-size: x-large;
+  bottom: 15%;
+  right: 20px;
+  font-size: 22px;
+}
+
+.heart-restaurant {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  font-size: 22px;
+}
+
+.heart-container .full-heart,
+.heart-restaurant .full-heart {
+  display: none;
+  opacity: 0.2;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.heart-container:hover .heart-restaurant:hover .empty-heart {
+  display: none;
+}
+
+.heart-container:hover .heart-restaurant:hover .full-heart {
+  display: inline-block;
+  animation: full 0.5s;
+}
+
+@keyframes full {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.main-restaurant {
+  border-radius: 15px;
+  transform: translateY(-45px);
 }
 
 footer {
@@ -198,6 +247,7 @@ footer .fa-solid {
 .special-ff {
   display: flex;
   justify-content: center;
+  font-size: 28px;
 }
 
 .restaurent-title {
@@ -205,11 +255,15 @@ footer .fa-solid {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
+  background: #F6F6F6;
+  border-radius: 25px 25px 0px 0px;
 }
-.restaurent-title .fa-heart {
-  display: flex;
-  font-size: 1.5em;
-  margin-left: 50px;
+
+.restaurant-heart {
+  position: absolute;
+  right: 10%;
+  top: 1%;
 }
 
 .menu {
@@ -240,23 +294,40 @@ footer .fa-solid {
 }
 
 .checkmark {
-  flex: 0%;
-  color: #F6F6F6;
-  background-color: #99E2D0;
-  text-align: center;
-  font-size: xx-large;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   position: absolute;
-  left: 330px;
+  right: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: #99e2d0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+  align-items: center;
+  font-size: 0;
+  border-radius: 0px 15px 15px 0px;
 }
 
-.checkmark:hover {
+.dish-card:hover .checkmark {
   animation-name: checkbox;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  transition: ease-in-out;
+  width: 80px;
+  font-size: 30px;
+}
+
+.menu-price {
+  transition: all 0.5s;
+}
+
+.dish-card:hover .menu-price {
+  transform: translateX(-80px);
+}
+
+.dish-card {
+  width: 80%;
+  transition: all 0, 5s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .dish-card {
@@ -275,25 +346,144 @@ footer .fa-solid {
 .menu-text {
   display: flex;
   flex-direction: column;
+  width: 90%;
+  transition: all 0.5s;
+}
+
+.dish-card:hover .menu-text {
+  width: 55%;
+}
+
+.menu-text p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu-text h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @keyframes checkbox {
   from {
     visibility: hidden;
-    transform: translateX(100px);
-    font-size: 0;
   }
   to {
     visibility: visible;
+  }
+}
+@keyframes menu {
+  from {
     transform: translateX(-100px);
-    font-size: xx-large;
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.entree .dish-card {
+  animation: menu 0.5s ease-in-out;
+}
+
+.plat .dish-card {
+  animation: menu 1s ease-in-out;
+}
+
+.dessert .dish-card {
+  animation: menu 1.5s ease-in-out;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+  visibility: hidden;
+  animation: loader 3s;
+}
+
+.loader-spinner {
+  position: absolute;
+  top: 50%;
+  left: 40vw;
+  border: 16px solid #99e2d0;
+  border-top: 16px solid #008766;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  animation: spin 3s forwards;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+@keyframes loader {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    visibility: visible;
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
+  }
+}
+@media (min-width: 767px) {
+  .cards-restaurant ul {
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .cards-restaurant ul a {
+    height: 210px;
+  }
+  .fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 180px;
+    margin-right: 180px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px;
+    margin-top: 30px;
+    align-items: flex-end;
+    height: 114px;
+    gap: 30px;
+    padding: 30px;
+  }
+  footer img {
+    display: flex;
+    justify-content: flex-end;
+    width: 138px;
+    height: 27px;
+    margin: 0;
+  }
+  footer .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 76px;
   }
 }
 .location {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   font-size: 16px;
   font-weight: 500;
   padding: 15px;
