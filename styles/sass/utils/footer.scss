@@ -1,24 +1,23 @@
-footer{
-    background-color: #353535;
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+  img {
+    filter: contrast(0);
+    filter: brightness(100);
+    width: 33%;
+    margin-bottom: 16px;
+  }
+  .text-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  a {
     color: white;
-    padding: 22px 25px;
-    img{
-        filter: contrast(0);
-        filter: brightness(100);
-        width: 33%;
-        margin-bottom: 16px;
-    }
-    .text-footer {
-
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-    a {
-        color: white;
-    }
-    .fa-solid {
-        width: 20px;
-        height: 20px;
-    }
+  }
+  .fa-solid {
+    width: 20px;
+    height: 20px;
+  }
 }

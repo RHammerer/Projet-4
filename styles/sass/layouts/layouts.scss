@@ -44,7 +44,6 @@ main {
 .heart-container .full-heart,
 .heart-restaurant .full-heart {
   display: none;
-  opacity: 0.2;
   background: $gradient-button;
   background-clip: text;
   -webkit-background-clip: text;
@@ -53,11 +52,13 @@ main {
   -moz-text-fill-color: transparent;
 }
 
-.heart-container:hover .heart-restaurant:hover .empty-heart {
+.heart-container:hover .empty-heart,
+.heart-restaurant:hover .empty-heart {
   display: none;
 }
 
-.heart-container:hover .heart-restaurant:hover .full-heart {
+.heart-container:hover .full-heart,
+.heart-restaurant:hover .full-heart {
   display: inline-block;
   animation: full 0.5s;
 }
@@ -72,5 +73,4 @@ main {
 }
 .main-restaurant {
   border-radius: 15px;
-  transform: translateY(-45px);
 }
