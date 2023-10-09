@@ -74,3 +74,15 @@ main {
 .main-restaurant {
   border-radius: 15px;
 }
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px;
+  .fa-location-dot {
+    padding-right: 10px;
+  }
+}
