@@ -28,6 +28,16 @@ main section {
 }
 main section h2 {
   margin: 10px;
+  align-self: flex-start;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+main section .dish::after {
+  content: " ";
+  height: 3px;
+  width: 40px;
+  background-color: #99e2d0;
 }
 main section .liste-restaurant {
   position: relative;
@@ -58,6 +68,10 @@ main section .liste-restaurant span {
   align-items: center;
   margin-top: 10px;
 }
+.cards-restaurant h3,
+.cards-restaurant p {
+  padding-left: 15px;
+}
 
 .discover {
   display: flex;
@@ -67,7 +81,7 @@ main section .liste-restaurant span {
   width: 100%;
   padding: 39px 50px;
   text-align: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .discover button {
   margin-top: 20px;
@@ -79,7 +93,7 @@ main section .liste-restaurant span {
   color: white;
   width: 218px;
   height: 50px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
 .fonctionnement {
@@ -168,7 +182,7 @@ main section a {
 .heart-container .full-heart,
 .heart-restaurant .full-heart {
   display: none;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -223,6 +237,12 @@ footer .fa-solid {
   height: 20px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .title-container {
   display: flex;
   justify-content: center;
@@ -255,13 +275,15 @@ footer .fa-solid {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 273px;
   width: 100%;
   padding: 15px;
   padding-top: 30px;
-  background: #F6F6F6;
+  background: #f6f6f6;
   border-radius: 25px 25px 0px 0px;
+  margin: auto;
+  margin-top: -48px;
+  z-index: 10;
+  position: relative;
 }
 
 .restaurant-heart {
@@ -271,7 +293,7 @@ footer .fa-solid {
 }
 
 .menu {
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 
 .menu-container {
@@ -285,10 +307,10 @@ footer .fa-solid {
   display: flex;
   justify-content: center;
   padding: 40px 0px;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 .button-container button {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   border: 0px;
   border-radius: 25px;
   color: white;
@@ -457,8 +479,8 @@ footer .fa-solid {
     display: flex;
     flex-direction: row;
     gap: 15px;
-    margin-left: 180px;
-    margin-right: 180px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
   footer {
     display: flex;
@@ -477,35 +499,24 @@ footer .fa-solid {
     height: 27px;
     margin: 0;
   }
-  .header-img {
-    position: relative;
-  }
   .restaurent-title {
     width: 70%;
     padding: 45px;
-    position: absolute;
-    left: 201px;
   }
   .menu {
     width: 70%;
     align-items: center;
-    transform: translateY(90px);
   }
   .main-restaurant {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .main-restaurant h2 {
-    display: flex;
-    align-items: flex-start;
-  }
   .menu-container {
     width: 60%;
   }
   .button-container {
     width: 70%;
-    margin-top: 90px;
   }
   .main-img {
     height: 300px;
@@ -519,6 +530,22 @@ footer .fa-solid {
     bottom: 5%;
     right: 15px;
     font-size: 22px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .restaurant {
+    align-self: flex-start;
+    padding-left: 15px;
+  }
+  .dish {
+    margin: 10px;
+    align-self: flex-start;
+    padding-left: 22%;
+    display: flex;
+    flex-direction: column;
   }
 }
 .location {

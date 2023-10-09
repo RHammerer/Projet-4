@@ -21,3 +21,8 @@ footer {
     height: 20px;
   }
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

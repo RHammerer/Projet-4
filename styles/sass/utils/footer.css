@@ -20,4 +20,10 @@ footer a {
 footer .fa-solid {
   width: 20px;
   height: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }/*# sourceMappingURL=footer.css.map */

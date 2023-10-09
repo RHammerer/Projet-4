@@ -4,6 +4,16 @@ main {
     flex-direction: column;
     h2 {
       margin: 10px;
+      align-self: flex-start;
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+    .dish::after {
+      content: " ";
+      height: 3px;
+      width: 40px;
+      background-color: $green-color;
     }
     .liste-restaurant {
       position: relative;
@@ -34,5 +44,9 @@ main {
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
+  }
+  h3,
+  p {
+    padding-left: 15px;
   }
 }
